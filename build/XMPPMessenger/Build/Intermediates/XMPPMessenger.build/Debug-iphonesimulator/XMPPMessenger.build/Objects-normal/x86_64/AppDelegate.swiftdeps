@@ -1,28 +1,75 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
+- "ChatDelegate"
 - "AppDelegate"
 provides-nominal:
+- "P13XMPPMessenger12ChatDelegate"
 - "C13XMPPMessenger11AppDelegate"
 provides-member:
+- ["P13XMPPMessenger12ChatDelegate", ""]
 - ["C13XMPPMessenger11AppDelegate", ""]
 provides-dynamic-lookup:
-- "applicationWillTerminate"
+- "xmppRosterStorage"
+- "xmppStreamDidAuthenticate"
+- "disconnect"
+- "xmppStreamDidConnect"
 - "applicationDidEnterBackground"
-- "applicationWillResignActive"
 - "window"
-- "applicationWillEnterForeground"
+- "applicationWillResignActive"
 - "application"
+- "xmppRoster"
+- "xmppRoster"
+- "applicationWillTerminate"
+- "connect"
 - "applicationDidBecomeActive"
+- "xmppStream"
+- "xmppStream"
+- "xmppStream"
+- "xmppStream"
+- "xmppStream"
+- "applicationWillEnterForeground"
 depends-top-level:
-- "UIResponder"
-- "UIApplicationLaunchOptionsKey"
-- "AppDelegate"
-- "UIApplicationDelegate"
+- "XMPPStreamDelegate"
 - "UIApplication"
-- !private "BooleanLiteralType"
-- "UIWindow"
+- "XMPPRoster"
+- "UIResponder"
+- "XMPPRosterDelegate"
+- !private "&&"
+- "XMPPMessage"
+- !private "XMPPJID"
+- !private "!="
+- !private "!"
+- "XMPPStream"
+- "AssignmentPrecedence"
+- "XMPPIQ"
 - "Bool"
+- !private "=="
+- !private "DispatchQueue"
+- !private "XMPPStreamTimeoutNone"
+- "UIApplicationDelegate"
+- "XMPPRosterCoreDataStorage"
+- "UIWindow"
+- "String"
+- !private "StringLiteralType"
+- !private "print"
+- "AppDelegate"
+- !private "UserDefaults"
+- "ChatDelegate"
+- "DDXMLElement"
+- "UIApplicationLaunchOptionsKey"
+- "XMPPPresence"
+- !private "BooleanLiteralType"
 depends-member:
+- !private ["Ps9AnyObject", "DispatchQueue"]
+- !private ["Ps9AnyObject", "UserDefaults"]
+- !private ["Ps9AnyObject", "XMPPJID"]
+- !private ["Ps9AnyObject", "XMPPPresence"]
+- !private ["Ps9AnyObject", "XMPPRoster"]
+- ["Ps9AnyObject", "XMPPRosterCoreDataStorage"]
+- !private ["Ps9AnyObject", "XMPPStream"]
+- !private ["Ps9AnyObject", "XMPPStreamTimeoutNone"]
+- !private ["Ps9AnyObject", "activate"]
+- !private ["Ps9AnyObject", "addDelegate"]
 - ["Ps9AnyObject", "application"]
 - ["Ps9AnyObject", "applicationDidBecomeActive"]
 - ["Ps9AnyObject", "applicationDidEnterBackground"]
@@ -35,13 +82,62 @@ depends-member:
 - ["Ps9AnyObject", "applicationWillEnterForeground"]
 - ["Ps9AnyObject", "applicationWillResignActive"]
 - ["Ps9AnyObject", "applicationWillTerminate"]
-- !private ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "authenticate"]
+- ["Ps9AnyObject", "connect"]
+- ["Ps9AnyObject", "delegate"]
+- ["Ps9AnyObject", "disconnect"]
+- !private ["Ps9AnyObject", "from"]
+- ["Ps9AnyObject", "goOffline"]
+- ["Ps9AnyObject", "goOnline"]
+- ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "isConnected"]
+- !private ["Ps9AnyObject", "isDisconnected"]
+- !private ["Ps9AnyObject", "main"]
+- !private ["Ps9AnyObject", "myJID"]
+- !private ["Ps9AnyObject", "print"]
+- !private ["Ps9AnyObject", "send"]
+- ["Ps9AnyObject", "setupStream"]
+- !private ["Ps9AnyObject", "standard"]
+- !private ["Ps9AnyObject", "string"]
+- !private ["Ps9AnyObject", "type"]
+- !private ["Ps9AnyObject", "user"]
 - ["Ps9AnyObject", "window"]
+- ["Ps9AnyObject", "xmppRoster"]
+- ["Ps9AnyObject", "xmppRosterDidBeginPopulating"]
+- ["Ps9AnyObject", "xmppRosterDidEndPopulating"]
+- ["Ps9AnyObject", "xmppRosterStorage"]
+- ["Ps9AnyObject", "xmppStream"]
+- ["Ps9AnyObject", "xmppStreamConnectDidTimeout"]
+- ["Ps9AnyObject", "xmppStreamDidAuthenticate"]
+- ["Ps9AnyObject", "xmppStreamDidChangeMyJID"]
+- ["Ps9AnyObject", "xmppStreamDidConnect"]
+- ["Ps9AnyObject", "xmppStreamDidDisconnect"]
+- ["Ps9AnyObject", "xmppStreamDidFilterStanza"]
+- ["Ps9AnyObject", "xmppStreamDidRegister"]
+- ["Ps9AnyObject", "xmppStreamDidSecure"]
+- ["Ps9AnyObject", "xmppStreamDidSendClosingStreamStanza"]
+- ["Ps9AnyObject", "xmppStreamDidStartNegotiation"]
+- ["Ps9AnyObject", "xmppStreamWasTold"]
+- ["Ps9AnyObject", "xmppStreamWasToldToDisconnect"]
+- ["Ps9AnyObject", "xmppStreamWillBind"]
+- ["Ps9AnyObject", "xmppStreamWillConnect"]
 - ["Ps9AnyObject", ""]
 - ["C13XMPPMessenger11AppDelegate", "Bool"]
+- ["C13XMPPMessenger11AppDelegate", "ChatDelegate"]
+- ["C13XMPPMessenger11AppDelegate", "DDXMLElement"]
+- !private ["C13XMPPMessenger11AppDelegate", "DispatchQueue"]
 - ["C13XMPPMessenger11AppDelegate", "UIApplication"]
 - ["C13XMPPMessenger11AppDelegate", "UIApplicationLaunchOptionsKey"]
 - ["C13XMPPMessenger11AppDelegate", "UIWindow"]
+- !private ["C13XMPPMessenger11AppDelegate", "UserDefaults"]
+- ["C13XMPPMessenger11AppDelegate", "XMPPIQ"]
+- !private ["C13XMPPMessenger11AppDelegate", "XMPPJID"]
+- ["C13XMPPMessenger11AppDelegate", "XMPPMessage"]
+- ["C13XMPPMessenger11AppDelegate", "XMPPPresence"]
+- ["C13XMPPMessenger11AppDelegate", "XMPPRoster"]
+- ["C13XMPPMessenger11AppDelegate", "XMPPRosterCoreDataStorage"]
+- ["C13XMPPMessenger11AppDelegate", "XMPPStream"]
+- !private ["C13XMPPMessenger11AppDelegate", "XMPPStreamTimeoutNone"]
 - ["C13XMPPMessenger11AppDelegate", "application"]
 - ["C13XMPPMessenger11AppDelegate", "applicationDidBecomeActive"]
 - ["C13XMPPMessenger11AppDelegate", "applicationDidEnterBackground"]
@@ -54,10 +150,47 @@ depends-member:
 - ["C13XMPPMessenger11AppDelegate", "applicationWillEnterForeground"]
 - ["C13XMPPMessenger11AppDelegate", "applicationWillResignActive"]
 - ["C13XMPPMessenger11AppDelegate", "applicationWillTerminate"]
+- ["C13XMPPMessenger11AppDelegate", "connect"]
 - ["C13XMPPMessenger11AppDelegate", "deinit"]
+- ["C13XMPPMessenger11AppDelegate", "delegate"]
+- ["C13XMPPMessenger11AppDelegate", "disconnect"]
+- !private ["C13XMPPMessenger11AppDelegate", "goOffline"]
+- !private ["C13XMPPMessenger11AppDelegate", "goOnline"]
 - ["C13XMPPMessenger11AppDelegate", "init"]
+- !private ["C13XMPPMessenger11AppDelegate", "print"]
+- !private ["C13XMPPMessenger11AppDelegate", "setupStream"]
 - ["C13XMPPMessenger11AppDelegate", "window"]
+- ["C13XMPPMessenger11AppDelegate", "xmppRoster"]
+- ["C13XMPPMessenger11AppDelegate", "xmppRosterDidBeginPopulating"]
+- ["C13XMPPMessenger11AppDelegate", "xmppRosterDidEndPopulating"]
+- ["C13XMPPMessenger11AppDelegate", "xmppRosterStorage"]
+- ["C13XMPPMessenger11AppDelegate", "xmppStream"]
+- ["C13XMPPMessenger11AppDelegate", "xmppStreamConnectDidTimeout"]
+- ["C13XMPPMessenger11AppDelegate", "xmppStreamDidAuthenticate"]
+- ["C13XMPPMessenger11AppDelegate", "xmppStreamDidChangeMyJID"]
+- ["C13XMPPMessenger11AppDelegate", "xmppStreamDidConnect"]
+- ["C13XMPPMessenger11AppDelegate", "xmppStreamDidDisconnect"]
+- ["C13XMPPMessenger11AppDelegate", "xmppStreamDidFilterStanza"]
+- ["C13XMPPMessenger11AppDelegate", "xmppStreamDidRegister"]
+- ["C13XMPPMessenger11AppDelegate", "xmppStreamDidSecure"]
+- ["C13XMPPMessenger11AppDelegate", "xmppStreamDidSendClosingStreamStanza"]
+- ["C13XMPPMessenger11AppDelegate", "xmppStreamDidStartNegotiation"]
+- ["C13XMPPMessenger11AppDelegate", "xmppStreamWasTold"]
+- ["C13XMPPMessenger11AppDelegate", "xmppStreamWasToldToDisconnect"]
+- ["C13XMPPMessenger11AppDelegate", "xmppStreamWillBind"]
+- ["C13XMPPMessenger11AppDelegate", "xmppStreamWillConnect"]
+- !private ["Sb", "_getBuiltinLogicValue"]
 - ["Sb", "deinit"]
+- !private ["Ps7CVarArg", "DispatchQueue"]
+- !private ["Ps7CVarArg", "UserDefaults"]
+- !private ["Ps7CVarArg", "XMPPJID"]
+- !private ["Ps7CVarArg", "XMPPPresence"]
+- !private ["Ps7CVarArg", "XMPPRoster"]
+- ["Ps7CVarArg", "XMPPRosterCoreDataStorage"]
+- !private ["Ps7CVarArg", "XMPPStream"]
+- !private ["Ps7CVarArg", "XMPPStreamTimeoutNone"]
+- !private ["Ps7CVarArg", "activate"]
+- !private ["Ps7CVarArg", "addDelegate"]
 - ["Ps7CVarArg", "application"]
 - ["Ps7CVarArg", "applicationDidBecomeActive"]
 - ["Ps7CVarArg", "applicationDidEnterBackground"]
@@ -70,9 +203,63 @@ depends-member:
 - ["Ps7CVarArg", "applicationWillEnterForeground"]
 - ["Ps7CVarArg", "applicationWillResignActive"]
 - ["Ps7CVarArg", "applicationWillTerminate"]
-- !private ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "authenticate"]
+- ["Ps7CVarArg", "connect"]
+- ["Ps7CVarArg", "delegate"]
+- ["Ps7CVarArg", "disconnect"]
+- !private ["Ps7CVarArg", "from"]
+- ["Ps7CVarArg", "goOffline"]
+- ["Ps7CVarArg", "goOnline"]
+- ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "isConnected"]
+- !private ["Ps7CVarArg", "isDisconnected"]
+- !private ["Ps7CVarArg", "main"]
+- !private ["Ps7CVarArg", "myJID"]
+- !private ["Ps7CVarArg", "print"]
+- !private ["Ps7CVarArg", "send"]
+- ["Ps7CVarArg", "setupStream"]
+- !private ["Ps7CVarArg", "standard"]
+- !private ["Ps7CVarArg", "string"]
+- !private ["Ps7CVarArg", "type"]
+- !private ["Ps7CVarArg", "user"]
 - ["Ps7CVarArg", "window"]
+- ["Ps7CVarArg", "xmppRoster"]
+- ["Ps7CVarArg", "xmppRosterDidBeginPopulating"]
+- ["Ps7CVarArg", "xmppRosterDidEndPopulating"]
+- ["Ps7CVarArg", "xmppRosterStorage"]
+- ["Ps7CVarArg", "xmppStream"]
+- ["Ps7CVarArg", "xmppStreamConnectDidTimeout"]
+- ["Ps7CVarArg", "xmppStreamDidAuthenticate"]
+- ["Ps7CVarArg", "xmppStreamDidChangeMyJID"]
+- ["Ps7CVarArg", "xmppStreamDidConnect"]
+- ["Ps7CVarArg", "xmppStreamDidDisconnect"]
+- ["Ps7CVarArg", "xmppStreamDidFilterStanza"]
+- ["Ps7CVarArg", "xmppStreamDidRegister"]
+- ["Ps7CVarArg", "xmppStreamDidSecure"]
+- ["Ps7CVarArg", "xmppStreamDidSendClosingStreamStanza"]
+- ["Ps7CVarArg", "xmppStreamDidStartNegotiation"]
+- ["Ps7CVarArg", "xmppStreamWasTold"]
+- ["Ps7CVarArg", "xmppStreamWasToldToDisconnect"]
+- ["Ps7CVarArg", "xmppStreamWillBind"]
+- ["Ps7CVarArg", "xmppStreamWillConnect"]
 - ["Ps7CVarArg", ""]
+- !private ["Vs9Character", "deinit"]
+- ["P13XMPPMessenger12ChatDelegate", "String"]
+- ["P13XMPPMessenger12ChatDelegate", "buddyWentOffline"]
+- ["P13XMPPMessenger12ChatDelegate", "buddyWentOnline"]
+- !private ["P13XMPPMessenger12ChatDelegate", "deinit"]
+- ["P13XMPPMessenger12ChatDelegate", "didDisconnect"]
+- !private ["Ps10Comparable", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "DispatchQueue"]
+- !private ["Ps28CustomDebugStringConvertible", "UserDefaults"]
+- !private ["Ps28CustomDebugStringConvertible", "XMPPJID"]
+- !private ["Ps28CustomDebugStringConvertible", "XMPPPresence"]
+- !private ["Ps28CustomDebugStringConvertible", "XMPPRoster"]
+- ["Ps28CustomDebugStringConvertible", "XMPPRosterCoreDataStorage"]
+- !private ["Ps28CustomDebugStringConvertible", "XMPPStream"]
+- !private ["Ps28CustomDebugStringConvertible", "XMPPStreamTimeoutNone"]
+- !private ["Ps28CustomDebugStringConvertible", "activate"]
+- !private ["Ps28CustomDebugStringConvertible", "addDelegate"]
 - ["Ps28CustomDebugStringConvertible", "application"]
 - ["Ps28CustomDebugStringConvertible", "applicationDidBecomeActive"]
 - ["Ps28CustomDebugStringConvertible", "applicationDidEnterBackground"]
@@ -85,9 +272,61 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "applicationWillEnterForeground"]
 - ["Ps28CustomDebugStringConvertible", "applicationWillResignActive"]
 - ["Ps28CustomDebugStringConvertible", "applicationWillTerminate"]
-- !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "authenticate"]
+- ["Ps28CustomDebugStringConvertible", "connect"]
+- ["Ps28CustomDebugStringConvertible", "delegate"]
+- ["Ps28CustomDebugStringConvertible", "disconnect"]
+- !private ["Ps28CustomDebugStringConvertible", "from"]
+- ["Ps28CustomDebugStringConvertible", "goOffline"]
+- ["Ps28CustomDebugStringConvertible", "goOnline"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "isConnected"]
+- !private ["Ps28CustomDebugStringConvertible", "isDisconnected"]
+- !private ["Ps28CustomDebugStringConvertible", "main"]
+- !private ["Ps28CustomDebugStringConvertible", "myJID"]
+- !private ["Ps28CustomDebugStringConvertible", "print"]
+- !private ["Ps28CustomDebugStringConvertible", "send"]
+- ["Ps28CustomDebugStringConvertible", "setupStream"]
+- !private ["Ps28CustomDebugStringConvertible", "standard"]
+- !private ["Ps28CustomDebugStringConvertible", "string"]
+- !private ["Ps28CustomDebugStringConvertible", "type"]
+- !private ["Ps28CustomDebugStringConvertible", "user"]
 - ["Ps28CustomDebugStringConvertible", "window"]
+- ["Ps28CustomDebugStringConvertible", "xmppRoster"]
+- ["Ps28CustomDebugStringConvertible", "xmppRosterDidBeginPopulating"]
+- ["Ps28CustomDebugStringConvertible", "xmppRosterDidEndPopulating"]
+- ["Ps28CustomDebugStringConvertible", "xmppRosterStorage"]
+- ["Ps28CustomDebugStringConvertible", "xmppStream"]
+- ["Ps28CustomDebugStringConvertible", "xmppStreamConnectDidTimeout"]
+- ["Ps28CustomDebugStringConvertible", "xmppStreamDidAuthenticate"]
+- ["Ps28CustomDebugStringConvertible", "xmppStreamDidChangeMyJID"]
+- ["Ps28CustomDebugStringConvertible", "xmppStreamDidConnect"]
+- ["Ps28CustomDebugStringConvertible", "xmppStreamDidDisconnect"]
+- ["Ps28CustomDebugStringConvertible", "xmppStreamDidFilterStanza"]
+- ["Ps28CustomDebugStringConvertible", "xmppStreamDidRegister"]
+- ["Ps28CustomDebugStringConvertible", "xmppStreamDidSecure"]
+- ["Ps28CustomDebugStringConvertible", "xmppStreamDidSendClosingStreamStanza"]
+- ["Ps28CustomDebugStringConvertible", "xmppStreamDidStartNegotiation"]
+- ["Ps28CustomDebugStringConvertible", "xmppStreamWasTold"]
+- ["Ps28CustomDebugStringConvertible", "xmppStreamWasToldToDisconnect"]
+- ["Ps28CustomDebugStringConvertible", "xmppStreamWillBind"]
+- ["Ps28CustomDebugStringConvertible", "xmppStreamWillConnect"]
 - ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
+- !private ["Ps17CustomReflectable", "init"]
+- !private ["Ps23CustomStringConvertible", "DispatchQueue"]
+- !private ["Ps23CustomStringConvertible", "UserDefaults"]
+- !private ["Ps23CustomStringConvertible", "XMPPJID"]
+- !private ["Ps23CustomStringConvertible", "XMPPPresence"]
+- !private ["Ps23CustomStringConvertible", "XMPPRoster"]
+- ["Ps23CustomStringConvertible", "XMPPRosterCoreDataStorage"]
+- !private ["Ps23CustomStringConvertible", "XMPPStream"]
+- !private ["Ps23CustomStringConvertible", "XMPPStreamTimeoutNone"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "activate"]
+- !private ["Ps23CustomStringConvertible", "addDelegate"]
 - ["Ps23CustomStringConvertible", "application"]
 - ["Ps23CustomStringConvertible", "applicationDidBecomeActive"]
 - ["Ps23CustomStringConvertible", "applicationDidEnterBackground"]
@@ -100,9 +339,67 @@ depends-member:
 - ["Ps23CustomStringConvertible", "applicationWillEnterForeground"]
 - ["Ps23CustomStringConvertible", "applicationWillResignActive"]
 - ["Ps23CustomStringConvertible", "applicationWillTerminate"]
-- !private ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "authenticate"]
+- ["Ps23CustomStringConvertible", "connect"]
+- ["Ps23CustomStringConvertible", "delegate"]
+- ["Ps23CustomStringConvertible", "disconnect"]
+- !private ["Ps23CustomStringConvertible", "from"]
+- ["Ps23CustomStringConvertible", "goOffline"]
+- ["Ps23CustomStringConvertible", "goOnline"]
+- ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "isConnected"]
+- !private ["Ps23CustomStringConvertible", "isDisconnected"]
+- !private ["Ps23CustomStringConvertible", "main"]
+- !private ["Ps23CustomStringConvertible", "myJID"]
+- !private ["Ps23CustomStringConvertible", "print"]
+- !private ["Ps23CustomStringConvertible", "send"]
+- ["Ps23CustomStringConvertible", "setupStream"]
+- !private ["Ps23CustomStringConvertible", "standard"]
+- !private ["Ps23CustomStringConvertible", "string"]
+- !private ["Ps23CustomStringConvertible", "type"]
+- !private ["Ps23CustomStringConvertible", "user"]
 - ["Ps23CustomStringConvertible", "window"]
+- ["Ps23CustomStringConvertible", "xmppRoster"]
+- ["Ps23CustomStringConvertible", "xmppRosterDidBeginPopulating"]
+- ["Ps23CustomStringConvertible", "xmppRosterDidEndPopulating"]
+- ["Ps23CustomStringConvertible", "xmppRosterStorage"]
+- ["Ps23CustomStringConvertible", "xmppStream"]
+- ["Ps23CustomStringConvertible", "xmppStreamConnectDidTimeout"]
+- ["Ps23CustomStringConvertible", "xmppStreamDidAuthenticate"]
+- ["Ps23CustomStringConvertible", "xmppStreamDidChangeMyJID"]
+- ["Ps23CustomStringConvertible", "xmppStreamDidConnect"]
+- ["Ps23CustomStringConvertible", "xmppStreamDidDisconnect"]
+- ["Ps23CustomStringConvertible", "xmppStreamDidFilterStanza"]
+- ["Ps23CustomStringConvertible", "xmppStreamDidRegister"]
+- ["Ps23CustomStringConvertible", "xmppStreamDidSecure"]
+- ["Ps23CustomStringConvertible", "xmppStreamDidSendClosingStreamStanza"]
+- ["Ps23CustomStringConvertible", "xmppStreamDidStartNegotiation"]
+- ["Ps23CustomStringConvertible", "xmppStreamWasTold"]
+- ["Ps23CustomStringConvertible", "xmppStreamWasToldToDisconnect"]
+- ["Ps23CustomStringConvertible", "xmppStreamWillBind"]
+- ["Ps23CustomStringConvertible", "xmppStreamWillConnect"]
 - ["Ps23CustomStringConvertible", ""]
+- !private ["CSo12DDXMLElement", "from"]
+- !private ["CSo12DDXMLElement", "init"]
+- !private ["CSo12DDXMLElement", "type"]
+- !private ["CSo9DDXMLNode", "from"]
+- !private ["CSo9DDXMLNode", "init"]
+- !private ["CSo9DDXMLNode", "type"]
+- !private ["CSo14DispatchObject", "main"]
+- !private ["CSo13DispatchQueue", "deinit"]
+- !private ["CSo13DispatchQueue", "main"]
+- ["Sd", "deinit"]
+- !private ["Ps9Equatable", "DispatchQueue"]
+- !private ["Ps9Equatable", "UserDefaults"]
+- !private ["Ps9Equatable", "XMPPJID"]
+- !private ["Ps9Equatable", "XMPPPresence"]
+- !private ["Ps9Equatable", "XMPPRoster"]
+- ["Ps9Equatable", "XMPPRosterCoreDataStorage"]
+- !private ["Ps9Equatable", "XMPPStream"]
+- !private ["Ps9Equatable", "XMPPStreamTimeoutNone"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "activate"]
+- !private ["Ps9Equatable", "addDelegate"]
 - ["Ps9Equatable", "application"]
 - ["Ps9Equatable", "applicationDidBecomeActive"]
 - ["Ps9Equatable", "applicationDidEnterBackground"]
@@ -115,9 +412,72 @@ depends-member:
 - ["Ps9Equatable", "applicationWillEnterForeground"]
 - ["Ps9Equatable", "applicationWillResignActive"]
 - ["Ps9Equatable", "applicationWillTerminate"]
-- !private ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "authenticate"]
+- ["Ps9Equatable", "connect"]
+- ["Ps9Equatable", "delegate"]
+- ["Ps9Equatable", "disconnect"]
+- !private ["Ps9Equatable", "from"]
+- ["Ps9Equatable", "goOffline"]
+- ["Ps9Equatable", "goOnline"]
+- ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "isConnected"]
+- !private ["Ps9Equatable", "isDisconnected"]
+- !private ["Ps9Equatable", "main"]
+- !private ["Ps9Equatable", "myJID"]
+- !private ["Ps9Equatable", "print"]
+- !private ["Ps9Equatable", "send"]
+- ["Ps9Equatable", "setupStream"]
+- !private ["Ps9Equatable", "standard"]
+- !private ["Ps9Equatable", "string"]
+- !private ["Ps9Equatable", "type"]
+- !private ["Ps9Equatable", "user"]
 - ["Ps9Equatable", "window"]
+- ["Ps9Equatable", "xmppRoster"]
+- ["Ps9Equatable", "xmppRosterDidBeginPopulating"]
+- ["Ps9Equatable", "xmppRosterDidEndPopulating"]
+- ["Ps9Equatable", "xmppRosterStorage"]
+- ["Ps9Equatable", "xmppStream"]
+- ["Ps9Equatable", "xmppStreamConnectDidTimeout"]
+- ["Ps9Equatable", "xmppStreamDidAuthenticate"]
+- ["Ps9Equatable", "xmppStreamDidChangeMyJID"]
+- ["Ps9Equatable", "xmppStreamDidConnect"]
+- ["Ps9Equatable", "xmppStreamDidDisconnect"]
+- ["Ps9Equatable", "xmppStreamDidFilterStanza"]
+- ["Ps9Equatable", "xmppStreamDidRegister"]
+- ["Ps9Equatable", "xmppStreamDidSecure"]
+- ["Ps9Equatable", "xmppStreamDidSendClosingStreamStanza"]
+- ["Ps9Equatable", "xmppStreamDidStartNegotiation"]
+- ["Ps9Equatable", "xmppStreamWasTold"]
+- ["Ps9Equatable", "xmppStreamWasToldToDisconnect"]
+- ["Ps9Equatable", "xmppStreamWillBind"]
+- ["Ps9Equatable", "xmppStreamWillConnect"]
 - ["Ps9Equatable", ""]
+- !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps32ExpressibleByStringInterpolation", "init"]
+- !private ["Ps26ExpressibleByStringLiteral", "init"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- !private ["Sf", "deinit"]
+- !private ["PSo22GCDAsyncSocketDelegate", "addDelegate"]
+- !private ["PSo22GCDAsyncSocketDelegate", "authenticate"]
+- !private ["PSo22GCDAsyncSocketDelegate", "connect"]
+- !private ["PSo22GCDAsyncSocketDelegate", "disconnect"]
+- !private ["PSo22GCDAsyncSocketDelegate", "init"]
+- !private ["PSo22GCDAsyncSocketDelegate", "isConnected"]
+- !private ["PSo22GCDAsyncSocketDelegate", "isDisconnected"]
+- !private ["PSo22GCDAsyncSocketDelegate", "myJID"]
+- !private ["PSo22GCDAsyncSocketDelegate", "send"]
+- !private ["Ps8Hashable", "DispatchQueue"]
+- !private ["Ps8Hashable", "UserDefaults"]
+- !private ["Ps8Hashable", "XMPPJID"]
+- !private ["Ps8Hashable", "XMPPPresence"]
+- !private ["Ps8Hashable", "XMPPRoster"]
+- ["Ps8Hashable", "XMPPRosterCoreDataStorage"]
+- !private ["Ps8Hashable", "XMPPStream"]
+- !private ["Ps8Hashable", "XMPPStreamTimeoutNone"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "activate"]
+- !private ["Ps8Hashable", "addDelegate"]
 - ["Ps8Hashable", "application"]
 - ["Ps8Hashable", "applicationDidBecomeActive"]
 - ["Ps8Hashable", "applicationDidEnterBackground"]
@@ -130,13 +490,82 @@ depends-member:
 - ["Ps8Hashable", "applicationWillEnterForeground"]
 - ["Ps8Hashable", "applicationWillResignActive"]
 - ["Ps8Hashable", "applicationWillTerminate"]
-- !private ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "authenticate"]
+- ["Ps8Hashable", "connect"]
+- ["Ps8Hashable", "delegate"]
+- ["Ps8Hashable", "disconnect"]
+- !private ["Ps8Hashable", "from"]
+- ["Ps8Hashable", "goOffline"]
+- ["Ps8Hashable", "goOnline"]
+- ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "isConnected"]
+- !private ["Ps8Hashable", "isDisconnected"]
+- !private ["Ps8Hashable", "main"]
+- !private ["Ps8Hashable", "myJID"]
+- !private ["Ps8Hashable", "print"]
+- !private ["Ps8Hashable", "send"]
+- ["Ps8Hashable", "setupStream"]
+- !private ["Ps8Hashable", "standard"]
+- !private ["Ps8Hashable", "string"]
+- !private ["Ps8Hashable", "type"]
+- !private ["Ps8Hashable", "user"]
 - ["Ps8Hashable", "window"]
+- ["Ps8Hashable", "xmppRoster"]
+- ["Ps8Hashable", "xmppRosterDidBeginPopulating"]
+- ["Ps8Hashable", "xmppRosterDidEndPopulating"]
+- ["Ps8Hashable", "xmppRosterStorage"]
+- ["Ps8Hashable", "xmppStream"]
+- ["Ps8Hashable", "xmppStreamConnectDidTimeout"]
+- ["Ps8Hashable", "xmppStreamDidAuthenticate"]
+- ["Ps8Hashable", "xmppStreamDidChangeMyJID"]
+- ["Ps8Hashable", "xmppStreamDidConnect"]
+- ["Ps8Hashable", "xmppStreamDidDisconnect"]
+- ["Ps8Hashable", "xmppStreamDidFilterStanza"]
+- ["Ps8Hashable", "xmppStreamDidRegister"]
+- ["Ps8Hashable", "xmppStreamDidSecure"]
+- ["Ps8Hashable", "xmppStreamDidSendClosingStreamStanza"]
+- ["Ps8Hashable", "xmppStreamDidStartNegotiation"]
+- ["Ps8Hashable", "xmppStreamWasTold"]
+- ["Ps8Hashable", "xmppStreamWasToldToDisconnect"]
+- ["Ps8Hashable", "xmppStreamWillBind"]
+- ["Ps8Hashable", "xmppStreamWillConnect"]
 - ["Ps8Hashable", ""]
+- ["SQ", "deinit"]
+- !private ["Si", "deinit"]
+- !private ["Vs5Int16", "deinit"]
+- !private ["Vs5Int32", "deinit"]
+- !private ["Vs5Int64", "deinit"]
+- !private ["Vs4Int8", "deinit"]
+- !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps25LosslessStringConvertible", "init"]
+- !private ["Ps10MirrorPath", "init"]
+- !private ["PSo8NSCoding", "from"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "type"]
+- !private ["PSo8NSCoding", "user"]
+- !private ["PSo9NSCopying", "from"]
+- !private ["PSo9NSCopying", "init"]
+- !private ["PSo9NSCopying", "type"]
+- !private ["PSo9NSCopying", "user"]
+- !private ["PSo16NSMutableCopying", "init"]
 - ["CSo8NSObject", "Bool"]
+- ["CSo8NSObject", "ChatDelegate"]
+- ["CSo8NSObject", "DDXMLElement"]
+- !private ["CSo8NSObject", "DispatchQueue"]
 - ["CSo8NSObject", "UIApplication"]
 - ["CSo8NSObject", "UIApplicationLaunchOptionsKey"]
 - ["CSo8NSObject", "UIWindow"]
+- !private ["CSo8NSObject", "UserDefaults"]
+- ["CSo8NSObject", "XMPPIQ"]
+- !private ["CSo8NSObject", "XMPPJID"]
+- ["CSo8NSObject", "XMPPMessage"]
+- ["CSo8NSObject", "XMPPPresence"]
+- ["CSo8NSObject", "XMPPRoster"]
+- ["CSo8NSObject", "XMPPRosterCoreDataStorage"]
+- ["CSo8NSObject", "XMPPStream"]
+- !private ["CSo8NSObject", "XMPPStreamTimeoutNone"]
+- !private ["CSo8NSObject", "activate"]
+- !private ["CSo8NSObject", "addDelegate"]
 - ["CSo8NSObject", "application"]
 - ["CSo8NSObject", "applicationDidBecomeActive"]
 - ["CSo8NSObject", "applicationDidEnterBackground"]
@@ -149,8 +578,55 @@ depends-member:
 - ["CSo8NSObject", "applicationWillEnterForeground"]
 - ["CSo8NSObject", "applicationWillResignActive"]
 - ["CSo8NSObject", "applicationWillTerminate"]
+- !private ["CSo8NSObject", "authenticate"]
+- ["CSo8NSObject", "connect"]
+- ["CSo8NSObject", "delegate"]
+- ["CSo8NSObject", "disconnect"]
+- !private ["CSo8NSObject", "from"]
+- ["CSo8NSObject", "goOffline"]
+- ["CSo8NSObject", "goOnline"]
 - ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "isConnected"]
+- !private ["CSo8NSObject", "isDisconnected"]
+- !private ["CSo8NSObject", "main"]
+- !private ["CSo8NSObject", "myJID"]
+- !private ["CSo8NSObject", "print"]
+- !private ["CSo8NSObject", "send"]
+- ["CSo8NSObject", "setupStream"]
+- !private ["CSo8NSObject", "standard"]
+- !private ["CSo8NSObject", "string"]
+- !private ["CSo8NSObject", "type"]
+- !private ["CSo8NSObject", "user"]
 - ["CSo8NSObject", "window"]
+- ["CSo8NSObject", "xmppRoster"]
+- ["CSo8NSObject", "xmppRosterDidBeginPopulating"]
+- ["CSo8NSObject", "xmppRosterDidEndPopulating"]
+- ["CSo8NSObject", "xmppRosterStorage"]
+- ["CSo8NSObject", "xmppStream"]
+- ["CSo8NSObject", "xmppStreamConnectDidTimeout"]
+- ["CSo8NSObject", "xmppStreamDidAuthenticate"]
+- ["CSo8NSObject", "xmppStreamDidChangeMyJID"]
+- ["CSo8NSObject", "xmppStreamDidConnect"]
+- ["CSo8NSObject", "xmppStreamDidDisconnect"]
+- ["CSo8NSObject", "xmppStreamDidFilterStanza"]
+- ["CSo8NSObject", "xmppStreamDidRegister"]
+- ["CSo8NSObject", "xmppStreamDidSecure"]
+- ["CSo8NSObject", "xmppStreamDidSendClosingStreamStanza"]
+- ["CSo8NSObject", "xmppStreamDidStartNegotiation"]
+- ["CSo8NSObject", "xmppStreamWasTold"]
+- ["CSo8NSObject", "xmppStreamWasToldToDisconnect"]
+- ["CSo8NSObject", "xmppStreamWillBind"]
+- ["CSo8NSObject", "xmppStreamWillConnect"]
+- !private ["PSo16NSObjectProtocol", "DispatchQueue"]
+- !private ["PSo16NSObjectProtocol", "UserDefaults"]
+- !private ["PSo16NSObjectProtocol", "XMPPJID"]
+- !private ["PSo16NSObjectProtocol", "XMPPPresence"]
+- !private ["PSo16NSObjectProtocol", "XMPPRoster"]
+- ["PSo16NSObjectProtocol", "XMPPRosterCoreDataStorage"]
+- !private ["PSo16NSObjectProtocol", "XMPPStream"]
+- !private ["PSo16NSObjectProtocol", "XMPPStreamTimeoutNone"]
+- !private ["PSo16NSObjectProtocol", "activate"]
+- !private ["PSo16NSObjectProtocol", "addDelegate"]
 - ["PSo16NSObjectProtocol", "application"]
 - ["PSo16NSObjectProtocol", "applicationDidBecomeActive"]
 - ["PSo16NSObjectProtocol", "applicationDidEnterBackground"]
@@ -163,10 +639,65 @@ depends-member:
 - ["PSo16NSObjectProtocol", "applicationWillEnterForeground"]
 - ["PSo16NSObjectProtocol", "applicationWillResignActive"]
 - ["PSo16NSObjectProtocol", "applicationWillTerminate"]
-- !private ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "authenticate"]
+- ["PSo16NSObjectProtocol", "connect"]
+- ["PSo16NSObjectProtocol", "delegate"]
+- ["PSo16NSObjectProtocol", "disconnect"]
+- !private ["PSo16NSObjectProtocol", "from"]
+- ["PSo16NSObjectProtocol", "goOffline"]
+- ["PSo16NSObjectProtocol", "goOnline"]
+- ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "isConnected"]
+- !private ["PSo16NSObjectProtocol", "isDisconnected"]
+- !private ["PSo16NSObjectProtocol", "main"]
+- !private ["PSo16NSObjectProtocol", "myJID"]
+- !private ["PSo16NSObjectProtocol", "print"]
+- !private ["PSo16NSObjectProtocol", "send"]
+- ["PSo16NSObjectProtocol", "setupStream"]
+- !private ["PSo16NSObjectProtocol", "standard"]
+- !private ["PSo16NSObjectProtocol", "string"]
+- !private ["PSo16NSObjectProtocol", "type"]
+- !private ["PSo16NSObjectProtocol", "user"]
 - ["PSo16NSObjectProtocol", "window"]
+- ["PSo16NSObjectProtocol", "xmppRoster"]
+- ["PSo16NSObjectProtocol", "xmppRosterDidBeginPopulating"]
+- ["PSo16NSObjectProtocol", "xmppRosterDidEndPopulating"]
+- ["PSo16NSObjectProtocol", "xmppRosterStorage"]
+- ["PSo16NSObjectProtocol", "xmppStream"]
+- ["PSo16NSObjectProtocol", "xmppStreamConnectDidTimeout"]
+- ["PSo16NSObjectProtocol", "xmppStreamDidAuthenticate"]
+- ["PSo16NSObjectProtocol", "xmppStreamDidChangeMyJID"]
+- ["PSo16NSObjectProtocol", "xmppStreamDidConnect"]
+- ["PSo16NSObjectProtocol", "xmppStreamDidDisconnect"]
+- ["PSo16NSObjectProtocol", "xmppStreamDidFilterStanza"]
+- ["PSo16NSObjectProtocol", "xmppStreamDidRegister"]
+- ["PSo16NSObjectProtocol", "xmppStreamDidSecure"]
+- ["PSo16NSObjectProtocol", "xmppStreamDidSendClosingStreamStanza"]
+- ["PSo16NSObjectProtocol", "xmppStreamDidStartNegotiation"]
+- ["PSo16NSObjectProtocol", "xmppStreamWasTold"]
+- ["PSo16NSObjectProtocol", "xmppStreamWasToldToDisconnect"]
+- ["PSo16NSObjectProtocol", "xmppStreamWillBind"]
+- ["PSo16NSObjectProtocol", "xmppStreamWillConnect"]
 - ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "from"]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["PSo14NSSecureCoding", "type"]
+- !private ["PSo14NSSecureCoding", "user"]
+- !private ["CSo8NSString", "init"]
+- !private ["CSo9OS_object", "main"]
 - ["Sq", "deinit"]
+- ["SS", "deinit"]
+- !private ["SS", "init"]
+- !private ["Ps16TextOutputStream", "init"]
+- !private ["Ps20TextOutputStreamable", "init"]
+- !private ["PSo21UIApplicationDelegate", "DispatchQueue"]
+- !private ["PSo21UIApplicationDelegate", "UserDefaults"]
+- !private ["PSo21UIApplicationDelegate", "XMPPJID"]
+- !private ["PSo21UIApplicationDelegate", "XMPPPresence"]
+- !private ["PSo21UIApplicationDelegate", "XMPPRoster"]
+- ["PSo21UIApplicationDelegate", "XMPPRosterCoreDataStorage"]
+- !private ["PSo21UIApplicationDelegate", "XMPPStream"]
+- !private ["PSo21UIApplicationDelegate", "XMPPStreamTimeoutNone"]
 - ["PSo21UIApplicationDelegate", "application"]
 - ["PSo21UIApplicationDelegate", "applicationDidBecomeActive"]
 - ["PSo21UIApplicationDelegate", "applicationDidEnterBackground"]
@@ -179,12 +710,50 @@ depends-member:
 - ["PSo21UIApplicationDelegate", "applicationWillEnterForeground"]
 - ["PSo21UIApplicationDelegate", "applicationWillResignActive"]
 - ["PSo21UIApplicationDelegate", "applicationWillTerminate"]
+- !private ["PSo21UIApplicationDelegate", "connect"]
+- !private ["PSo21UIApplicationDelegate", "delegate"]
+- !private ["PSo21UIApplicationDelegate", "disconnect"]
+- !private ["PSo21UIApplicationDelegate", "goOffline"]
+- !private ["PSo21UIApplicationDelegate", "goOnline"]
+- !private ["PSo21UIApplicationDelegate", "print"]
+- !private ["PSo21UIApplicationDelegate", "setupStream"]
 - ["PSo21UIApplicationDelegate", "window"]
+- ["PSo21UIApplicationDelegate", "xmppRoster"]
+- ["PSo21UIApplicationDelegate", "xmppRosterDidBeginPopulating"]
+- ["PSo21UIApplicationDelegate", "xmppRosterDidEndPopulating"]
+- !private ["PSo21UIApplicationDelegate", "xmppRosterStorage"]
+- ["PSo21UIApplicationDelegate", "xmppStream"]
+- ["PSo21UIApplicationDelegate", "xmppStreamConnectDidTimeout"]
+- ["PSo21UIApplicationDelegate", "xmppStreamDidAuthenticate"]
+- ["PSo21UIApplicationDelegate", "xmppStreamDidChangeMyJID"]
+- ["PSo21UIApplicationDelegate", "xmppStreamDidConnect"]
+- ["PSo21UIApplicationDelegate", "xmppStreamDidDisconnect"]
+- ["PSo21UIApplicationDelegate", "xmppStreamDidFilterStanza"]
+- ["PSo21UIApplicationDelegate", "xmppStreamDidRegister"]
+- ["PSo21UIApplicationDelegate", "xmppStreamDidSecure"]
+- ["PSo21UIApplicationDelegate", "xmppStreamDidSendClosingStreamStanza"]
+- ["PSo21UIApplicationDelegate", "xmppStreamDidStartNegotiation"]
+- ["PSo21UIApplicationDelegate", "xmppStreamWasTold"]
+- ["PSo21UIApplicationDelegate", "xmppStreamWasToldToDisconnect"]
+- ["PSo21UIApplicationDelegate", "xmppStreamWillBind"]
+- ["PSo21UIApplicationDelegate", "xmppStreamWillConnect"]
 - ["PSo21UIApplicationDelegate", ""]
 - ["CSo11UIResponder", "Bool"]
+- ["CSo11UIResponder", "ChatDelegate"]
+- ["CSo11UIResponder", "DDXMLElement"]
+- !private ["CSo11UIResponder", "DispatchQueue"]
 - ["CSo11UIResponder", "UIApplication"]
 - ["CSo11UIResponder", "UIApplicationLaunchOptionsKey"]
 - ["CSo11UIResponder", "UIWindow"]
+- !private ["CSo11UIResponder", "UserDefaults"]
+- ["CSo11UIResponder", "XMPPIQ"]
+- !private ["CSo11UIResponder", "XMPPJID"]
+- ["CSo11UIResponder", "XMPPMessage"]
+- ["CSo11UIResponder", "XMPPPresence"]
+- ["CSo11UIResponder", "XMPPRoster"]
+- ["CSo11UIResponder", "XMPPRosterCoreDataStorage"]
+- ["CSo11UIResponder", "XMPPStream"]
+- !private ["CSo11UIResponder", "XMPPStreamTimeoutNone"]
 - ["CSo11UIResponder", "application"]
 - ["CSo11UIResponder", "applicationDidBecomeActive"]
 - ["CSo11UIResponder", "applicationDidEnterBackground"]
@@ -197,10 +766,44 @@ depends-member:
 - ["CSo11UIResponder", "applicationWillEnterForeground"]
 - ["CSo11UIResponder", "applicationWillResignActive"]
 - ["CSo11UIResponder", "applicationWillTerminate"]
+- ["CSo11UIResponder", "connect"]
 - ["CSo11UIResponder", "deinit"]
+- ["CSo11UIResponder", "delegate"]
+- ["CSo11UIResponder", "disconnect"]
+- ["CSo11UIResponder", "goOffline"]
+- ["CSo11UIResponder", "goOnline"]
 - ["CSo11UIResponder", "init"]
+- !private ["CSo11UIResponder", "print"]
+- ["CSo11UIResponder", "setupStream"]
 - ["CSo11UIResponder", "window"]
+- ["CSo11UIResponder", "xmppRoster"]
+- ["CSo11UIResponder", "xmppRosterDidBeginPopulating"]
+- ["CSo11UIResponder", "xmppRosterDidEndPopulating"]
+- ["CSo11UIResponder", "xmppRosterStorage"]
+- ["CSo11UIResponder", "xmppStream"]
+- ["CSo11UIResponder", "xmppStreamConnectDidTimeout"]
+- ["CSo11UIResponder", "xmppStreamDidAuthenticate"]
+- ["CSo11UIResponder", "xmppStreamDidChangeMyJID"]
+- ["CSo11UIResponder", "xmppStreamDidConnect"]
+- ["CSo11UIResponder", "xmppStreamDidDisconnect"]
+- ["CSo11UIResponder", "xmppStreamDidFilterStanza"]
+- ["CSo11UIResponder", "xmppStreamDidRegister"]
+- ["CSo11UIResponder", "xmppStreamDidSecure"]
+- ["CSo11UIResponder", "xmppStreamDidSendClosingStreamStanza"]
+- ["CSo11UIResponder", "xmppStreamDidStartNegotiation"]
+- ["CSo11UIResponder", "xmppStreamWasTold"]
+- ["CSo11UIResponder", "xmppStreamWasToldToDisconnect"]
+- ["CSo11UIResponder", "xmppStreamWillBind"]
+- ["CSo11UIResponder", "xmppStreamWillConnect"]
 - ["CSo11UIResponder", ""]
+- !private ["PSo30UIResponderStandardEditActions", "DispatchQueue"]
+- !private ["PSo30UIResponderStandardEditActions", "UserDefaults"]
+- !private ["PSo30UIResponderStandardEditActions", "XMPPJID"]
+- !private ["PSo30UIResponderStandardEditActions", "XMPPPresence"]
+- !private ["PSo30UIResponderStandardEditActions", "XMPPRoster"]
+- ["PSo30UIResponderStandardEditActions", "XMPPRosterCoreDataStorage"]
+- !private ["PSo30UIResponderStandardEditActions", "XMPPStream"]
+- !private ["PSo30UIResponderStandardEditActions", "XMPPStreamTimeoutNone"]
 - ["PSo30UIResponderStandardEditActions", "application"]
 - ["PSo30UIResponderStandardEditActions", "applicationDidBecomeActive"]
 - ["PSo30UIResponderStandardEditActions", "applicationDidEnterBackground"]
@@ -213,9 +816,186 @@ depends-member:
 - ["PSo30UIResponderStandardEditActions", "applicationWillEnterForeground"]
 - ["PSo30UIResponderStandardEditActions", "applicationWillResignActive"]
 - ["PSo30UIResponderStandardEditActions", "applicationWillTerminate"]
-- !private ["PSo30UIResponderStandardEditActions", "init"]
+- ["PSo30UIResponderStandardEditActions", "connect"]
+- ["PSo30UIResponderStandardEditActions", "delegate"]
+- ["PSo30UIResponderStandardEditActions", "disconnect"]
+- ["PSo30UIResponderStandardEditActions", "goOffline"]
+- ["PSo30UIResponderStandardEditActions", "goOnline"]
+- ["PSo30UIResponderStandardEditActions", "init"]
+- !private ["PSo30UIResponderStandardEditActions", "print"]
+- ["PSo30UIResponderStandardEditActions", "setupStream"]
 - ["PSo30UIResponderStandardEditActions", "window"]
+- ["PSo30UIResponderStandardEditActions", "xmppRoster"]
+- ["PSo30UIResponderStandardEditActions", "xmppRosterDidBeginPopulating"]
+- ["PSo30UIResponderStandardEditActions", "xmppRosterDidEndPopulating"]
+- ["PSo30UIResponderStandardEditActions", "xmppRosterStorage"]
+- ["PSo30UIResponderStandardEditActions", "xmppStream"]
+- ["PSo30UIResponderStandardEditActions", "xmppStreamConnectDidTimeout"]
+- ["PSo30UIResponderStandardEditActions", "xmppStreamDidAuthenticate"]
+- ["PSo30UIResponderStandardEditActions", "xmppStreamDidChangeMyJID"]
+- ["PSo30UIResponderStandardEditActions", "xmppStreamDidConnect"]
+- ["PSo30UIResponderStandardEditActions", "xmppStreamDidDisconnect"]
+- ["PSo30UIResponderStandardEditActions", "xmppStreamDidFilterStanza"]
+- ["PSo30UIResponderStandardEditActions", "xmppStreamDidRegister"]
+- ["PSo30UIResponderStandardEditActions", "xmppStreamDidSecure"]
+- ["PSo30UIResponderStandardEditActions", "xmppStreamDidSendClosingStreamStanza"]
+- ["PSo30UIResponderStandardEditActions", "xmppStreamDidStartNegotiation"]
+- ["PSo30UIResponderStandardEditActions", "xmppStreamWasTold"]
+- ["PSo30UIResponderStandardEditActions", "xmppStreamWasToldToDisconnect"]
+- ["PSo30UIResponderStandardEditActions", "xmppStreamWillBind"]
+- ["PSo30UIResponderStandardEditActions", "xmppStreamWillConnect"]
 - ["PSo30UIResponderStandardEditActions", ""]
+- !private ["Su", "deinit"]
+- !private ["Vs6UInt16", "deinit"]
+- !private ["Vs6UInt32", "deinit"]
+- !private ["Vs6UInt64", "deinit"]
+- !private ["Vs5UInt8", "deinit"]
+- !private ["Sc", "deinit"]
+- ["CSo12UserDefaults", "deinit"]
+- !private ["CSo12UserDefaults", "standard"]
+- !private ["CSo12UserDefaults", "string"]
+- ["CSo19XMPPCoreDataStorage", "init"]
+- !private ["CSo11XMPPElement", "from"]
+- !private ["CSo11XMPPElement", "init"]
+- !private ["CSo11XMPPElement", "type"]
+- !private ["CSo7XMPPJID", "init"]
+- !private ["CSo7XMPPJID", "user"]
+- !private ["CSo10XMPPModule", "activate"]
+- !private ["CSo10XMPPModule", "addDelegate"]
+- !private ["CSo10XMPPModule", "init"]
+- !private ["CSo12XMPPPresence", "from"]
+- !private ["CSo12XMPPPresence", "init"]
+- !private ["CSo12XMPPPresence", "type"]
+- !private ["CSo10XMPPRoster", "activate"]
+- !private ["CSo10XMPPRoster", "addDelegate"]
+- ["CSo10XMPPRoster", "deinit"]
+- !private ["CSo10XMPPRoster", "init"]
+- ["CSo25XMPPRosterCoreDataStorage", "deinit"]
+- ["CSo25XMPPRosterCoreDataStorage", "init"]
+- !private ["PSo18XMPPRosterDelegate", "DispatchQueue"]
+- !private ["PSo18XMPPRosterDelegate", "UserDefaults"]
+- !private ["PSo18XMPPRosterDelegate", "XMPPJID"]
+- !private ["PSo18XMPPRosterDelegate", "XMPPPresence"]
+- !private ["PSo18XMPPRosterDelegate", "XMPPRoster"]
+- ["PSo18XMPPRosterDelegate", "XMPPRosterCoreDataStorage"]
+- !private ["PSo18XMPPRosterDelegate", "XMPPStream"]
+- !private ["PSo18XMPPRosterDelegate", "XMPPStreamTimeoutNone"]
+- ["PSo18XMPPRosterDelegate", "application"]
+- ["PSo18XMPPRosterDelegate", "applicationDidBecomeActive"]
+- ["PSo18XMPPRosterDelegate", "applicationDidEnterBackground"]
+- ["PSo18XMPPRosterDelegate", "applicationDidFinishLaunching"]
+- ["PSo18XMPPRosterDelegate", "applicationDidReceiveMemoryWarning"]
+- ["PSo18XMPPRosterDelegate", "applicationProtectedDataDidBecomeAvailable"]
+- ["PSo18XMPPRosterDelegate", "applicationProtectedDataWillBecomeUnavailable"]
+- ["PSo18XMPPRosterDelegate", "applicationShouldRequestHealthAuthorization"]
+- ["PSo18XMPPRosterDelegate", "applicationSignificantTimeChange"]
+- ["PSo18XMPPRosterDelegate", "applicationWillEnterForeground"]
+- ["PSo18XMPPRosterDelegate", "applicationWillResignActive"]
+- ["PSo18XMPPRosterDelegate", "applicationWillTerminate"]
+- !private ["PSo18XMPPRosterDelegate", "connect"]
+- !private ["PSo18XMPPRosterDelegate", "delegate"]
+- !private ["PSo18XMPPRosterDelegate", "disconnect"]
+- !private ["PSo18XMPPRosterDelegate", "goOffline"]
+- !private ["PSo18XMPPRosterDelegate", "goOnline"]
+- !private ["PSo18XMPPRosterDelegate", "print"]
+- !private ["PSo18XMPPRosterDelegate", "setupStream"]
+- ["PSo18XMPPRosterDelegate", "window"]
+- ["PSo18XMPPRosterDelegate", "xmppRoster"]
+- ["PSo18XMPPRosterDelegate", "xmppRosterDidBeginPopulating"]
+- ["PSo18XMPPRosterDelegate", "xmppRosterDidEndPopulating"]
+- !private ["PSo18XMPPRosterDelegate", "xmppRosterStorage"]
+- ["PSo18XMPPRosterDelegate", "xmppStream"]
+- ["PSo18XMPPRosterDelegate", "xmppStreamConnectDidTimeout"]
+- ["PSo18XMPPRosterDelegate", "xmppStreamDidAuthenticate"]
+- ["PSo18XMPPRosterDelegate", "xmppStreamDidChangeMyJID"]
+- ["PSo18XMPPRosterDelegate", "xmppStreamDidConnect"]
+- ["PSo18XMPPRosterDelegate", "xmppStreamDidDisconnect"]
+- ["PSo18XMPPRosterDelegate", "xmppStreamDidFilterStanza"]
+- ["PSo18XMPPRosterDelegate", "xmppStreamDidRegister"]
+- ["PSo18XMPPRosterDelegate", "xmppStreamDidSecure"]
+- ["PSo18XMPPRosterDelegate", "xmppStreamDidSendClosingStreamStanza"]
+- ["PSo18XMPPRosterDelegate", "xmppStreamDidStartNegotiation"]
+- ["PSo18XMPPRosterDelegate", "xmppStreamWasTold"]
+- ["PSo18XMPPRosterDelegate", "xmppStreamWasToldToDisconnect"]
+- ["PSo18XMPPRosterDelegate", "xmppStreamWillBind"]
+- ["PSo18XMPPRosterDelegate", "xmppStreamWillConnect"]
+- ["PSo18XMPPRosterDelegate", ""]
+- ["PSo17XMPPRosterStorage", "init"]
+- !private ["CSo10XMPPStream", "addDelegate"]
+- !private ["CSo10XMPPStream", "authenticate"]
+- !private ["CSo10XMPPStream", "connect"]
+- ["CSo10XMPPStream", "deinit"]
+- !private ["CSo10XMPPStream", "disconnect"]
+- !private ["CSo10XMPPStream", "init"]
+- !private ["CSo10XMPPStream", "isConnected"]
+- !private ["CSo10XMPPStream", "isDisconnected"]
+- !private ["CSo10XMPPStream", "myJID"]
+- !private ["CSo10XMPPStream", "send"]
+- !private ["PSo18XMPPStreamDelegate", "DispatchQueue"]
+- !private ["PSo18XMPPStreamDelegate", "UserDefaults"]
+- !private ["PSo18XMPPStreamDelegate", "XMPPJID"]
+- !private ["PSo18XMPPStreamDelegate", "XMPPPresence"]
+- !private ["PSo18XMPPStreamDelegate", "XMPPRoster"]
+- ["PSo18XMPPStreamDelegate", "XMPPRosterCoreDataStorage"]
+- !private ["PSo18XMPPStreamDelegate", "XMPPStream"]
+- !private ["PSo18XMPPStreamDelegate", "XMPPStreamTimeoutNone"]
+- ["PSo18XMPPStreamDelegate", "application"]
+- ["PSo18XMPPStreamDelegate", "applicationDidBecomeActive"]
+- ["PSo18XMPPStreamDelegate", "applicationDidEnterBackground"]
+- ["PSo18XMPPStreamDelegate", "applicationDidFinishLaunching"]
+- ["PSo18XMPPStreamDelegate", "applicationDidReceiveMemoryWarning"]
+- ["PSo18XMPPStreamDelegate", "applicationProtectedDataDidBecomeAvailable"]
+- ["PSo18XMPPStreamDelegate", "applicationProtectedDataWillBecomeUnavailable"]
+- ["PSo18XMPPStreamDelegate", "applicationShouldRequestHealthAuthorization"]
+- ["PSo18XMPPStreamDelegate", "applicationSignificantTimeChange"]
+- ["PSo18XMPPStreamDelegate", "applicationWillEnterForeground"]
+- ["PSo18XMPPStreamDelegate", "applicationWillResignActive"]
+- ["PSo18XMPPStreamDelegate", "applicationWillTerminate"]
+- !private ["PSo18XMPPStreamDelegate", "connect"]
+- !private ["PSo18XMPPStreamDelegate", "delegate"]
+- !private ["PSo18XMPPStreamDelegate", "disconnect"]
+- !private ["PSo18XMPPStreamDelegate", "goOffline"]
+- !private ["PSo18XMPPStreamDelegate", "goOnline"]
+- !private ["PSo18XMPPStreamDelegate", "print"]
+- !private ["PSo18XMPPStreamDelegate", "setupStream"]
+- ["PSo18XMPPStreamDelegate", "window"]
+- ["PSo18XMPPStreamDelegate", "xmppRoster"]
+- ["PSo18XMPPStreamDelegate", "xmppRosterDidBeginPopulating"]
+- ["PSo18XMPPStreamDelegate", "xmppRosterDidEndPopulating"]
+- !private ["PSo18XMPPStreamDelegate", "xmppRosterStorage"]
+- ["PSo18XMPPStreamDelegate", "xmppStream"]
+- ["PSo18XMPPStreamDelegate", "xmppStreamConnectDidTimeout"]
+- ["PSo18XMPPStreamDelegate", "xmppStreamDidAuthenticate"]
+- ["PSo18XMPPStreamDelegate", "xmppStreamDidChangeMyJID"]
+- ["PSo18XMPPStreamDelegate", "xmppStreamDidConnect"]
+- ["PSo18XMPPStreamDelegate", "xmppStreamDidDisconnect"]
+- ["PSo18XMPPStreamDelegate", "xmppStreamDidFilterStanza"]
+- ["PSo18XMPPStreamDelegate", "xmppStreamDidRegister"]
+- ["PSo18XMPPStreamDelegate", "xmppStreamDidSecure"]
+- ["PSo18XMPPStreamDelegate", "xmppStreamDidSendClosingStreamStanza"]
+- ["PSo18XMPPStreamDelegate", "xmppStreamDidStartNegotiation"]
+- ["PSo18XMPPStreamDelegate", "xmppStreamWasTold"]
+- ["PSo18XMPPStreamDelegate", "xmppStreamWasToldToDisconnect"]
+- ["PSo18XMPPStreamDelegate", "xmppStreamWillBind"]
+- ["PSo18XMPPStreamDelegate", "xmppStreamWillConnect"]
+- ["PSo18XMPPStreamDelegate", ""]
+- !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- !private ["Ps9_Hashable", "DispatchQueue"]
+- !private ["Ps9_Hashable", "UserDefaults"]
+- !private ["Ps9_Hashable", "XMPPJID"]
+- !private ["Ps9_Hashable", "XMPPPresence"]
+- !private ["Ps9_Hashable", "XMPPRoster"]
+- ["Ps9_Hashable", "XMPPRosterCoreDataStorage"]
+- !private ["Ps9_Hashable", "XMPPStream"]
+- !private ["Ps9_Hashable", "XMPPStreamTimeoutNone"]
+- !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps9_Hashable", "activate"]
+- !private ["Ps9_Hashable", "addDelegate"]
 - ["Ps9_Hashable", "application"]
 - ["Ps9_Hashable", "applicationDidBecomeActive"]
 - ["Ps9_Hashable", "applicationDidEnterBackground"]
@@ -228,25 +1008,125 @@ depends-member:
 - ["Ps9_Hashable", "applicationWillEnterForeground"]
 - ["Ps9_Hashable", "applicationWillResignActive"]
 - ["Ps9_Hashable", "applicationWillTerminate"]
-- !private ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "authenticate"]
+- ["Ps9_Hashable", "connect"]
+- ["Ps9_Hashable", "delegate"]
+- ["Ps9_Hashable", "disconnect"]
+- !private ["Ps9_Hashable", "from"]
+- ["Ps9_Hashable", "goOffline"]
+- ["Ps9_Hashable", "goOnline"]
+- ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "isConnected"]
+- !private ["Ps9_Hashable", "isDisconnected"]
+- !private ["Ps9_Hashable", "main"]
+- !private ["Ps9_Hashable", "myJID"]
+- !private ["Ps9_Hashable", "print"]
+- !private ["Ps9_Hashable", "send"]
+- ["Ps9_Hashable", "setupStream"]
+- !private ["Ps9_Hashable", "standard"]
+- !private ["Ps9_Hashable", "string"]
+- !private ["Ps9_Hashable", "type"]
+- !private ["Ps9_Hashable", "user"]
 - ["Ps9_Hashable", "window"]
+- ["Ps9_Hashable", "xmppRoster"]
+- ["Ps9_Hashable", "xmppRosterDidBeginPopulating"]
+- ["Ps9_Hashable", "xmppRosterDidEndPopulating"]
+- ["Ps9_Hashable", "xmppRosterStorage"]
+- ["Ps9_Hashable", "xmppStream"]
+- ["Ps9_Hashable", "xmppStreamConnectDidTimeout"]
+- ["Ps9_Hashable", "xmppStreamDidAuthenticate"]
+- ["Ps9_Hashable", "xmppStreamDidChangeMyJID"]
+- ["Ps9_Hashable", "xmppStreamDidConnect"]
+- ["Ps9_Hashable", "xmppStreamDidDisconnect"]
+- ["Ps9_Hashable", "xmppStreamDidFilterStanza"]
+- ["Ps9_Hashable", "xmppStreamDidRegister"]
+- ["Ps9_Hashable", "xmppStreamDidSecure"]
+- ["Ps9_Hashable", "xmppStreamDidSendClosingStreamStanza"]
+- ["Ps9_Hashable", "xmppStreamDidStartNegotiation"]
+- ["Ps9_Hashable", "xmppStreamWasTold"]
+- ["Ps9_Hashable", "xmppStreamWasToldToDisconnect"]
+- ["Ps9_Hashable", "xmppStreamWillBind"]
+- ["Ps9_Hashable", "xmppStreamWillConnect"]
 - ["Ps9_Hashable", ""]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
+- ["Vs26_OptionalNilComparisonType", "deinit"]
 depends-nominal:
 - "Ps9AnyObject"
 - "C13XMPPMessenger11AppDelegate"
 - "Sb"
 - "Ps7CVarArg"
+- !private "Vs9Character"
+- "P13XMPPMessenger12ChatDelegate"
+- !private "Ps10Comparable"
 - "Ps28CustomDebugStringConvertible"
+- !private "Ps29CustomPlaygroundQuickLookable"
+- !private "Ps17CustomReflectable"
 - "Ps23CustomStringConvertible"
+- !private "CSo12DDXMLElement"
+- !private "CSo9DDXMLNode"
+- !private "CSo14DispatchObject"
+- !private "CSo13DispatchQueue"
+- "Sd"
 - "Ps9Equatable"
+- !private "Ps27ExpressibleByBooleanLiteral"
+- !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- !private "Ps32ExpressibleByStringInterpolation"
+- !private "Ps26ExpressibleByStringLiteral"
+- !private "Ps33ExpressibleByUnicodeScalarLiteral"
+- !private "Sf"
+- !private "PSo22GCDAsyncSocketDelegate"
 - "Ps8Hashable"
+- "SQ"
+- !private "Si"
+- !private "Vs5Int16"
+- !private "Vs5Int32"
+- !private "Vs5Int64"
+- !private "Vs4Int8"
+- !private "Ps25LosslessStringConvertible"
+- !private "Ps10MirrorPath"
+- !private "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- !private "PSo16NSMutableCopying"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
+- !private "CSo9OS_object"
 - "Sq"
+- "SS"
+- !private "Ps16TextOutputStream"
+- !private "Ps20TextOutputStreamable"
 - "PSo21UIApplicationDelegate"
 - "CSo11UIResponder"
 - "PSo30UIResponderStandardEditActions"
+- !private "Su"
+- !private "Vs6UInt16"
+- !private "Vs6UInt32"
+- !private "Vs6UInt64"
+- !private "Vs5UInt8"
+- !private "Sc"
+- "CSo12UserDefaults"
+- "CSo19XMPPCoreDataStorage"
+- !private "CSo11XMPPElement"
+- !private "CSo7XMPPJID"
+- !private "CSo10XMPPModule"
+- !private "CSo12XMPPPresence"
+- "CSo10XMPPRoster"
+- "CSo25XMPPRosterCoreDataStorage"
+- "PSo18XMPPRosterDelegate"
+- "PSo17XMPPRosterStorage"
+- "CSo10XMPPStream"
+- "PSo18XMPPStreamDelegate"
+- !private "Ps35_ExpressibleByBuiltinBooleanLiteral"
+- !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- !private "Ps34_ExpressibleByBuiltinStringLiteral"
+- !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- !private "Ps35_HasCustomAnyHashableRepresentation"
 - "Ps9_Hashable"
+- !private "Ps21_ObjectiveCBridgeable"
+- "Vs26_OptionalNilComparisonType"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
@@ -259,4 +1139,183 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
-interface-hash: "7e85a999868267b7cde0941f4dd635ac"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/KissXML/KissXML.framework/Headers/KissXML.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/KissXML/KissXML.framework/Headers/NSString+DDXML.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/KissXML/KissXML.framework/Headers/DDXMLDocument.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/KissXML/KissXML.framework/Headers/DDXMLElement.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/KissXML/KissXML.framework/Headers/DDXMLNode.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/KissXML/KissXML.framework/Headers/DDXML.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/KissXML/KissXML.framework/Headers/DDXMLElementAdditions.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/KissXML/KissXML.framework/Headers/KissXML-umbrella.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/KissXML/KissXML.framework/Modules/module.modulemap"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/CocoaAsyncSocket/CocoaAsyncSocket.framework/Headers/GCDAsyncUdpSocket.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/CocoaAsyncSocket/CocoaAsyncSocket.framework/Headers/GCDAsyncSocket.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/CocoaAsyncSocket/CocoaAsyncSocket.framework/Headers/CocoaAsyncSocket-umbrella.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/CocoaAsyncSocket/CocoaAsyncSocket.framework/Modules/module.modulemap"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/CocoaLumberjack/CocoaLumberjack.framework/Headers/DDMultiFormatter.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/CocoaLumberjack/CocoaLumberjack.framework/Headers/DDDispatchQueueLogFormatter.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/CocoaLumberjack/CocoaLumberjack.framework/Headers/DDContextFilterLogFormatter.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/CocoaLumberjack/CocoaLumberjack.framework/Headers/CocoaLumberjack.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/CocoaLumberjack/CocoaLumberjack.framework/Headers/DDTTYLogger.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/CocoaLumberjack/CocoaLumberjack.framework/Headers/DDLogMacros.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/CocoaLumberjack/CocoaLumberjack.framework/Headers/DDLog+LOGV.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/CocoaLumberjack/CocoaLumberjack.framework/Headers/DDFileLogger.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/CocoaLumberjack/CocoaLumberjack.framework/Headers/DDAssertMacros.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/CocoaLumberjack/CocoaLumberjack.framework/Headers/DDASLLogger.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/CocoaLumberjack/CocoaLumberjack.framework/Headers/DDASLLogCapture.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/CocoaLumberjack/CocoaLumberjack.framework/Headers/DDLegacyMacros.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/CocoaLumberjack/CocoaLumberjack.framework/Headers/DDLog.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/CocoaLumberjack/CocoaLumberjack.framework/Headers/DDAbstractDatabaseLogger.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/CocoaLumberjack/CocoaLumberjack.framework/Headers/CocoaLumberjack-umbrella.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/CocoaLumberjack/CocoaLumberjack.framework/Modules/module.modulemap"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPMUCLight.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPRoomLightMessageCoreDataStorageObject.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPRoomLight.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPRoomLightCoreDataStorage.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPSlot.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPHTTPFileUpload.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPIQ+XEP_0357.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/NSXMLElement+XEP_0352.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/NSXMLElement+XEP_0335.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPMessage+XEP_0334.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPMessage+XEP_0333.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPMessageArchiveManagement.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPMessage+XEP_0308.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/NSXMLElement+XEP_0297.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPMessageCarbons.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPMessage+XEP_0280.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPMessage+XEP_0224.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPAttentionModule.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XEP_0223.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPTime.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPAutoTime.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPPing.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPAutoPing.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPStreamManagementStanzas.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPStreamManagement.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPStreamManagementMemoryStorage.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPBlocking.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPMessageDeliveryReceipts.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPMessage+XEP_0184.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPPresence+XEP_0172.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPMessage+XEP_0172.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPURI.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPMessageArchiving_Contact_CoreDataObject.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPMessageArchiving_Message_CoreDataObject.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPMessageArchiving.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPMessageArchivingCoreDataStorage.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPCapsResourceCoreDataStorageObject.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPCapsCoreDataStorageObject.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPCapabilities.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPCapabilitiesCoreDataStorage.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/NSString+XEP_0106.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPTransports.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPSoftwareVersion.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPMessage+XEP_0085.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPRegistration.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPMessage+XEP_0066.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPIQ+XEP_0066.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPPubSub.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPIQ+XEP_0060.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPResultSet.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/NSXMLElement+XEP_0059.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/NSDate+XMPPDateTimeProfiles.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPDateTimeProfiles.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPvCardTempTel.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPvCardTempLabel.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPvCardTempEmail.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPvCardTempBase.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPvCardTempAdrTypes.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPvCardTempAdr.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPvCardTemp.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPvCardTempCoreDataStorageObject.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPvCardCoreDataStorageObject.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPvCardAvatarModule.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPvCardTempModule.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPvCardCoreDataStorage.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPvCardAvatarCoreDataStorageObject.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPRoomPrivate.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPMUC.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPMessage+XEP0045.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPRoomOccupantMemoryStorageObject.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPRoomMessageMemoryStorageObject.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPRoomMemoryStorage.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPRoomHybridStorageProtected.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPRoomOccupantHybridMemoryStorageObject.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPRoomMessageHybridCoreDataStorageObject.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPRoomHybridStorage.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPRoomOccupantCoreDataStorageObject.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPRoomMessageCoreDataStorageObject.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPRoomOccupant.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPRoomMessage.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPRoom.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPRoomCoreDataStorage.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPPrivacy.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPLastActivity.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPIQ+LastActivity.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPJabberRPCModule.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPIQ+JabberRPCResonse.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPIQ+JabberRPC.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPRosterPrivate.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPRosterMemoryStoragePrivate.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPUserMemoryStorageObject.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPRosterMemoryStorage.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPResourceMemoryStorageObject.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPUserCoreDataStorageObject.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPUser.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPRoster.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPRosterCoreDataStorage.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPResource.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPResourceCoreDataStorageObject.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPGroupCoreDataStorageObject.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPReconnect.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPProcessOne.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPGoogleSharedStatus.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPOutgoingFileTransfer.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPIncomingFileTransfer.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/TURNSocket.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPFileTransfer.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/NSXMLElement+XEP_0203.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPCoreDataStorageProtected.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPCoreDataStorage.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPTimer.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPStringPrep.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPSRVResolver.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPIDTracker.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/RFImageToDataTransformer.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/DDList.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/NSNumber+XMPP.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/NSData+XMPP.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPXOAuth2Google.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/stringprep.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/idn-int.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPParser.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPLogging.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPInternal.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPConstants.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPFramework.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/NSXMLElement+XMPP.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPDeprecatedDigestAuthentication.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPDeprecatedPlainAuthentication.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPAnonymousAuthentication.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPXFacebookPlatformAuthentication.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPPlainAuthentication.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPSCRAMSHA1Authentication.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPDigestMD5Authentication.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPModule.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPPresence.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPMessage.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPIQ.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPElement.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/GCDMulticastDelegate.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPCustomBinding.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPSASLAuthentication.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPStream.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPJID.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPP.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPBandwidthMonitor.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Headers/XMPPFramework-umbrella.h"
+- "/Users/hamzaozturk/Desktop/Projects/XMPPMessenger/build/XMPPMessenger/Build/Products/Debug-iphonesimulator/XMPPFramework/XMPPFramework.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreLocation.swiftmodule"
+interface-hash: "1b81f4ae29ae65c0b16bb6891b47c17e"

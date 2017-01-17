@@ -116,32 +116,81 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 #if defined(__has_feature) && __has_feature(modules)
 @import UIKit;
+@import XMPPFramework;
+@import Foundation;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
 #pragma clang diagnostic ignored "-Wduplicate-method-arg"
 @class UIWindow;
+@class XMPPStream;
+@class XMPPRosterCoreDataStorage;
+@class XMPPRoster;
 @class UIApplication;
+@class XMPPIQ;
+@class XMPPMessage;
+@class XMPPPresence;
+@class DDXMLElement;
 
 SWIFT_CLASS("_TtC13XMPPMessenger11AppDelegate")
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, XMPPStreamDelegate, XMPPRosterDelegate>
 @property (nonatomic, strong) UIWindow * _Nullable window;
+@property (nonatomic, strong) XMPPStream * _Nonnull xmppStream;
+@property (nonatomic, readonly, strong) XMPPRosterCoreDataStorage * _Nonnull xmppRosterStorage;
+@property (nonatomic, strong) XMPPRoster * _Nonnull xmppRoster;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (BOOL)application:(UIApplication * _Nonnull)application didFinishLaunchingWithOptions:(NSDictionary<UIApplicationLaunchOptionsKey, id> * _Nullable)launchOptions;
 - (void)applicationWillResignActive:(UIApplication * _Nonnull)application;
 - (void)applicationDidEnterBackground:(UIApplication * _Nonnull)application;
 - (void)applicationWillEnterForeground:(UIApplication * _Nonnull)application;
 - (void)applicationDidBecomeActive:(UIApplication * _Nonnull)application;
 - (void)applicationWillTerminate:(UIApplication * _Nonnull)application;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (BOOL)connect;
+- (void)disconnect;
+- (void)xmppStreamDidConnect:(XMPPStream * _Null_unspecified)sender;
+- (void)xmppStreamDidAuthenticate:(XMPPStream * _Null_unspecified)sender;
+- (BOOL)xmppStream:(XMPPStream * _Null_unspecified)sender didReceiveIQ:(XMPPIQ * _Null_unspecified)iq;
+- (void)xmppStream:(XMPPStream * _Null_unspecified)sender didReceiveMessage:(XMPPMessage * _Null_unspecified)message;
+- (void)xmppStream:(XMPPStream * _Null_unspecified)sender didSendMessage:(XMPPMessage * _Null_unspecified)message;
+- (void)xmppStream:(XMPPStream * _Null_unspecified)sender didReceivePresence:(XMPPPresence * _Null_unspecified)presence;
+- (void)xmppRoster:(XMPPRoster * _Null_unspecified)sender didReceiveRosterItem:(DDXMLElement * _Null_unspecified)item;
 @end
 
+@class UITextField;
 @class NSBundle;
 @class NSCoder;
 
-SWIFT_CLASS("_TtC13XMPPMessenger14ViewController")
-@interface ViewController : UIViewController
+SWIFT_CLASS("_TtC13XMPPMessenger19LoginViewController")
+@interface LoginViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified loginTextField;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified passwordTextField;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
+- (IBAction)loginWithSender:(id _Nonnull)sender;
+- (IBAction)doneWithSender:(id _Nonnull)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class NSMutableArray;
+@class UITableView;
+@class UITableViewCell;
+
+SWIFT_CLASS("_TtC13XMPPMessenger25RosterTableViewController")
+@interface RosterTableViewController : UITableViewController
+@property (nonatomic, strong) NSMutableArray * _Nonnull onlineBuddies;
+@property (nonatomic, readonly, strong) AppDelegate * _Nonnull appDelegate;
+- (void)viewDidLoad;
+- (void)viewDidAppear:(BOOL)animated;
+- (void)didReceiveMemoryWarning;
+- (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (void)buddyWentOnlineWithName:(NSString * _Nonnull)name;
+- (void)buddyWentOfflineWithName:(NSString * _Nonnull)name;
+- (void)didDisconnect;
+- (nonnull instancetype)initWithStyle:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end

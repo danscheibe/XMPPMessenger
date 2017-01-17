@@ -7,21 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		033246709EDD09808812F70A /* Pods_XMPPMessenger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B65E80C95D91723B62F36DD /* Pods_XMPPMessenger.framework */; };
 		673880E91E2AA43100D8672E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673880E81E2AA43100D8672E /* AppDelegate.swift */; };
-		673880EB1E2AA43100D8672E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673880EA1E2AA43100D8672E /* ViewController.swift */; };
 		673880EE1E2AA43100D8672E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 673880EC1E2AA43100D8672E /* Main.storyboard */; };
 		673880F01E2AA43100D8672E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 673880EF1E2AA43100D8672E /* Assets.xcassets */; };
 		673880F31E2AA43100D8672E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 673880F11E2AA43100D8672E /* LaunchScreen.storyboard */; };
+		673880FB1E2B577700D8672E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 673880FA1E2B577700D8672E /* CFNetwork.framework */; };
+		673880FD1E2B578200D8672E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 673880FC1E2B578200D8672E /* Security.framework */; };
+		673880FF1E2B58DE00D8672E /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 673880FE1E2B58DE00D8672E /* libresolv.tbd */; };
+		67E991DB1E2D543C0026C18C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E991DA1E2D543C0026C18C /* LoginViewController.swift */; };
+		67E991DD1E2D56790026C18C /* RosterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E991DC1E2D56790026C18C /* RosterTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		39A492C6DE41DEC5BDA72723 /* Pods-XMPPMessenger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMPPMessenger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XMPPMessenger/Pods-XMPPMessenger.debug.xcconfig"; sourceTree = "<group>"; };
+		3B65E80C95D91723B62F36DD /* Pods_XMPPMessenger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XMPPMessenger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		673880E51E2AA43100D8672E /* XMPPMessenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XMPPMessenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		673880E81E2AA43100D8672E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		673880EA1E2AA43100D8672E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		673880ED1E2AA43100D8672E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		673880EF1E2AA43100D8672E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		673880F21E2AA43100D8672E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		673880F41E2AA43100D8672E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		673880FA1E2B577700D8672E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		673880FC1E2B578200D8672E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		673880FE1E2B58DE00D8672E /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		67E991DA1E2D543C0026C18C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		67E991DC1E2D56790026C18C /* RosterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RosterTableViewController.swift; sourceTree = "<group>"; };
+		C60DAAE763FD4DCE895DA8F8 /* Pods-XMPPMessenger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMPPMessenger.release.xcconfig"; path = "Pods/Target Support Files/Pods-XMPPMessenger/Pods-XMPPMessenger.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +41,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				673880FF1E2B58DE00D8672E /* libresolv.tbd in Frameworks */,
+				673880FD1E2B578200D8672E /* Security.framework in Frameworks */,
+				673880FB1E2B577700D8672E /* CFNetwork.framework in Frameworks */,
+				033246709EDD09808812F70A /* Pods_XMPPMessenger.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E3E743A32B733D9BCC287CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				673880FE1E2B58DE00D8672E /* libresolv.tbd */,
+				673880FC1E2B578200D8672E /* Security.framework */,
+				673880FA1E2B577700D8672E /* CFNetwork.framework */,
+				3B65E80C95D91723B62F36DD /* Pods_XMPPMessenger.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		673880DC1E2AA43100D8672E = {
 			isa = PBXGroup;
 			children = (
 				673880E71E2AA43100D8672E /* XMPPMessenger */,
 				673880E61E2AA43100D8672E /* Products */,
+				961D45AAFA1B22435581BF50 /* Pods */,
+				2E3E743A32B733D9BCC287CE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +84,23 @@
 			isa = PBXGroup;
 			children = (
 				673880E81E2AA43100D8672E /* AppDelegate.swift */,
-				673880EA1E2AA43100D8672E /* ViewController.swift */,
+				67E991DA1E2D543C0026C18C /* LoginViewController.swift */,
+				67E991DC1E2D56790026C18C /* RosterTableViewController.swift */,
 				673880EC1E2AA43100D8672E /* Main.storyboard */,
 				673880EF1E2AA43100D8672E /* Assets.xcassets */,
 				673880F11E2AA43100D8672E /* LaunchScreen.storyboard */,
 				673880F41E2AA43100D8672E /* Info.plist */,
 			);
 			path = XMPPMessenger;
+			sourceTree = "<group>";
+		};
+		961D45AAFA1B22435581BF50 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				39A492C6DE41DEC5BDA72723 /* Pods-XMPPMessenger.debug.xcconfig */,
+				C60DAAE763FD4DCE895DA8F8 /* Pods-XMPPMessenger.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 673880F71E2AA43100D8672E /* Build configuration list for PBXNativeTarget "XMPPMessenger" */;
 			buildPhases = (
+				4BBD5FC42FDABDCB0A51D85C /* [CP] Check Pods Manifest.lock */,
 				673880E11E2AA43100D8672E /* Sources */,
 				673880E21E2AA43100D8672E /* Frameworks */,
 				673880E31E2AA43100D8672E /* Resources */,
+				87442D265764355B7282E67E /* [CP] Embed Pods Frameworks */,
+				417E6719C5757E72476233FC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,12 +174,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		417E6719C5757E72476233FC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XMPPMessenger/Pods-XMPPMessenger-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4BBD5FC42FDABDCB0A51D85C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		87442D265764355B7282E67E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XMPPMessenger/Pods-XMPPMessenger-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		673880E11E2AA43100D8672E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				673880EB1E2AA43100D8672E /* ViewController.swift in Sources */,
+				67E991DD1E2D56790026C18C /* RosterTableViewController.swift in Sources */,
+				67E991DB1E2D543C0026C18C /* LoginViewController.swift in Sources */,
 				673880E91E2AA43100D8672E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,9 +295,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-lxml2";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -247,8 +340,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-lxml2";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
@@ -257,6 +352,7 @@
 		};
 		673880F81E2AA43100D8672E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39A492C6DE41DEC5BDA72723 /* Pods-XMPPMessenger.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = BJ8T457226;
@@ -270,6 +366,7 @@
 		};
 		673880F91E2AA43100D8672E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C60DAAE763FD4DCE895DA8F8 /* Pods-XMPPMessenger.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = BJ8T457226;
@@ -300,6 +397,7 @@
 				673880F91E2AA43100D8672E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
